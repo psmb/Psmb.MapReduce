@@ -3,6 +3,10 @@
 This package provides `.map()` and `.reduce()` FlowQuery operations.
 Could be useful, huh?
 
+## Installation
+
+`composer require 'psmb/mapreduce:@dev'`
+
 ## Usage
 
 ### Map
