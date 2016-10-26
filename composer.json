@@ -1,0 +1,20 @@
+{
+    "description": "Map/Reduce FlowQuery operations",
+    "type": "neos-package",
+    "name": "psmb/mapreduce",
+    "license": "LGPL-3.0+",
+    "require": {
+        "typo3/neos": "*",
+        "typo3/flow": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Psmb\\MapReduce": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Psmb.MapReduce"
+        }
+    }
+}
