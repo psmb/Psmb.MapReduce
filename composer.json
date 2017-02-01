@@ -4,8 +4,7 @@
     "name": "psmb/mapreduce",
     "license": "LGPL-3.0+",
     "require": {
-        "typo3/neos": "*",
-        "typo3/flow": "*"
+        "neos/neos": "~3.0"
     },
     "autoload": {
         "psr-0": {
