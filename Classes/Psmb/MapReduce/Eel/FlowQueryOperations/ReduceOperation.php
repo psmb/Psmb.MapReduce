@@ -3,7 +3,7 @@ namespace Psmb\MapReduce\Eel\FlowQueryOperations;
 
 use Neos\Flow\Annotations as Flow;
 use Neos\Eel\FlowQuery\Operations\AbstractOperation;
-use TYPO3\TYPO3CR\Domain\Model\NodeInterface;
+use Neos\ContentRepository\Domain\Model\NodeInterface;
 
 /**
  * Reduce Operation
