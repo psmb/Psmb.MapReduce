@@ -2,7 +2,7 @@
 namespace Psmb\MapReduce\Eel\FlowQueryOperations;
 
 use Neos\Flow\Annotations as Flow;
-use TYPO3\Eel\FlowQuery\Operations\AbstractOperation;
+use Neos\Eel\FlowQuery\Operations\AbstractOperation;
 use TYPO3\TYPO3CR\Domain\Model\NodeInterface;
 
 /**
@@ -47,20 +47,20 @@ class ReduceOperation extends AbstractOperation {
 
 	/**
 	 * @Flow\Inject
-	 * @var \TYPO3\Eel\EelEvaluatorInterface
+	 * @var \Neos\Eel\EelEvaluatorInterface
 	 */
 	protected $eelEvaluator;
 
 	/**
 	 * {@inheritdoc}
 	 *
-	 * @param \TYPO3\Eel\FlowQuery\FlowQuery $flowQuery
+	 * @param \Neos\Eel\FlowQuery\FlowQuery $flowQuery
 	 * @param array $arguments
 	 * @return void
 	 */
-	public function evaluate(\TYPO3\Eel\FlowQuery\FlowQuery $flowQuery, array $arguments) {
+	public function evaluate(\Neos\Eel\FlowQuery\FlowQuery $flowQuery, array $arguments) {
 		if (!isset($arguments[0]) || empty($arguments[0])) {
-			throw new \TYPO3\Eel\FlowQuery\FlowQueryException('No Eel expression provided', 1332492243);
+			throw new \Neos\Eel\FlowQuery\FlowQueryException('No Eel expression provided', 1332492243);
 		}
 		if (!isset($arguments[1]) || empty($arguments[1])) {
 			$previousValue = null;
@@ -76,7 +76,7 @@ class ReduceOperation extends AbstractOperation {
 				'index' => $key,
 				'array' => $context
 			);
-			$previousValue = \TYPO3\Eel\Utility::evaluateEelExpression($expression, $this->eelEvaluator, $contextVariables);
+			$previousValue = \Neos\Eel\Utility::evaluateEelExpression($expression, $this->eelEvaluator, $contextVariables);
 		}
 		return $previousValue;
 	}
